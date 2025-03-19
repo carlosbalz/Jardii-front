@@ -1,11 +1,9 @@
-/* General reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set a background color and center the container */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -72,7 +70,8 @@ h2 {
     flex-direction: column;
 }
 
-.menu-item h3 {
+/* .menu-item h3 { */
+.menu-item-title {
     font-size: xx-large;
     color: #333;
     margin-bottom: 8px;
@@ -108,15 +107,13 @@ h3 {
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-}
-
 .item-img {
     width: 250px;
-    height: 100%;
+    height: 100%;    
+}
+
+img {
+    border-radius: 8px;
 }
 
 .tabs {
@@ -184,12 +181,22 @@ main {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 580px;   
+    display: flex;
+    justify-content: start;
+    flex-direction: column;   
 }
-.close {
-    float: right;
-    cursor: pointer;
+
+.modal-title {
+    font-size: xx-large;
+    color: #333;
+    font-weight: bold;
+    flex-grow: 1;    
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 html, body, #root {
@@ -200,11 +207,73 @@ html, body, #root {
     box-sizing: border-box;
 }
 
-.aditional-item, p {
+.additional-menu {
+    text-align: start;
+    justify-content: start;        
+    margin-top: auto;    
+}
+
+.additional-item, p {
     font-size: large;
-    color: #333;
+    color: #333;        
+    text-align: start;    
 }
 
 span {
     padding-left: 5px;
+}
+
+
+.modal-img {
+    max-height: 300px;    
+    max-width: 300px;
+    width: auto;
+    height: auto;
+}
+
+.additional-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    list-style: none;    
+}
+
+.add-to-cart-button {
+    background-color: #d32f2f; 
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;    
+}
+  
+.add-to-cart-button:hover {
+background-color: #b71c1c; 
+}
+
+
+.close-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: x-large;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-left: auto;
+}
+
+.close-button:hover {
+    transform: scale(1.1);
+}
+
+.modal-top {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }

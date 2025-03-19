@@ -42,9 +42,9 @@ const Menu = () => {
                 <div className="menu-item" key={index} onClick={() => handleShowDetails(burger)}>
                   <img className="item-img" src={burger.image_path} alt={burger.name} />
                   <div className="details">
-                    <h3>{burger.name}</h3>
+                    <h3 className="menu-item-title">{burger.name}</h3>
                     <p className="description">{burger.description}</p>
-                    <p className="price"><strong>{burger.price}</strong></p>
+                    <p className="price"><strong>R${burger.price}</strong></p>
                   </div>
                 </div>
               ))}
@@ -59,8 +59,8 @@ const Menu = () => {
                 <div className="menu-item" key={index} onClick={() => handleShowDetails(drink)}>
                   <img className="item-img" src={drink.image_path} alt={drink.name} />
                   <div className="details">
-                    <h3>{drink.name}</h3>
-                    <p className="price"><strong>{drink.price}</strong></p>
+                    <h3 className="menu-item-title">{drink.name}</h3>
+                    <p className="price"><strong>R${drink.price}</strong></p>
                   </div>
                 </div>
               ))}
@@ -77,16 +77,16 @@ const Menu = () => {
 };
 
 const burgers = [
-  { name: "Clássico", description: "Pão, carne bovina, queijo, alface, tomate e maionese.", price: "R$ 17,00", image_path: "/images/burger.jpg" },
-  { name: "BBQ", description: "Pão, carne bovina, queijo, cebola caramelizada, molho barbecue e bacon.", price: "R$ 18,00", image_path: "/images/burger.jpg" },
-  { name: "Vegano", description: "Pão vegano, hambúrguer de grão de bico, alface, tomate e maionese vegana.", price: "R$ 17,00", image_path: "/images/burger.jpg" },
-  { name: "Frango Grelhado", description: "Pão, frango grelhado, queijo, alface, tomate e molho especial.", price: "R$ 16,00", image_path: "/images/burger.jpg" },
-  { name: "Duplo Queijo", description: "Pão, carne bovina dupla, dois tipos de queijo, alface, tomate e maionese.", price: "R$ 20,00", image_path: "/images/burger.jpg" }
+  { name: "Clássico", description: "Pão, carne bovina, queijo, alface, tomate e maionese.", price: 17.0, image_path: "/images/burger.jpg", type: "burger" },
+  { name: "BBQ", description: "Pão, carne bovina, queijo, cebola caramelizada, molho barbecue e bacon.", price: 18.0, image_path: "/images/burger.jpg", type: "burger" },
+  { name: "Vegano", description: "Pão vegano, hambúrguer de grão de bico, alface, tomate e maionese vegana.", price: 17.0, image_path: "/images/burger.jpg", type: "burger" },
+  { name: "Frango Grelhado", description: "Pão, frango grelhado, queijo, alface, tomate e molho especial.", price: 16.0, image_path: "/images/burger.jpg", type: "burger" },
+  { name: "Duplo Queijo", description: "Pão, carne bovina dupla, dois tipos de queijo, alface, tomate e maionese.", price: 20.0, image_path: "/images/burger.jpg", type: "burger" }
 ];
 
 const drinks = [
-  { name: "Coca lata", price: "R$ 8,00", image_path: "/images/coca-lata.jpg" },
-  { name: "Coca zero lata", price: "R$ 8,00", image_path: "/images/coca-zero-lata.jpg" }
+  { name: "Coca lata", price: 6.0, image_path: "/images/coca-lata.jpg" },
+  { name: "Coca zero lata", price: 6.0, image_path: "/images/coca-zero-lata.jpg" }
 ];
 
 export default Menu;
